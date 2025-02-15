@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   async function generateResponse() {
-    document.getElementById("textbox").focus();
+    // document.getElementById("textbox").focus();
     if (!question.trim()) return;
 
     const updatedHistory = [
