@@ -73,11 +73,11 @@ function App() {
     const words = botReply.trim().split(/\s+/);  // Split by whitespace
     const lastWord = words[words.length - 1];
 
-    localStorage.setItem("last_message", botReply);
-
+    
     console.log("Last Word:", lastWord);
-
+    
     if (lastWord.toUpperCase() === "DISMISS") {
+      localStorage.setItem("last_message", botReply);
       setShowButton(false);
       localStorage.setItem("dismiss_triggered", "true");
     } else {
