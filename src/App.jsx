@@ -98,12 +98,7 @@ function App() {
         { showButton && <textarea className='textArea' id='textbox'
           placeholder="Type something intelligent"
           class="input input-alt"
-          value={question} onChange={(e) => setQuestion(e.target.value)} onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) {
-              e.preventDefault();
-              generateResponse();
-            }
-          }}
+          value={question} onChange={(e) => setQuestion(e.target.value)}}
         ></textarea>}
         <span className="input-border input-border-alt"></span>
       </div>
